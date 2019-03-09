@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+		<link href="css/normalize.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+		<div class="content-box"> 
+			<header>
+				<a href="index.html" class="home"><img src="img/sedona-logo.png" width="138" height="70" alt="Логотип сайта Седоны"></a>
+				<nav class="main-navigation">
+					<ul class="site-navigation">
+						<li class="navigation-item"><a href="info.html">Информация</a></li>
+						<li class="navigation-item"><a href="fotoandvideo.html">Фото и видео</a></li>
+						<li class="navigation-item"><a href="sitemap.html">Карта штата</a></li>
+						<li class="navigation-item"><span class="current">Гостиницы</span></li>
+					</ul>
+				</nav>
+			</header>
+			<main class="content">
+				<h1 class="visually-hidden">Поиск гостиницы в Седоне</h1>
+				<section class="filters">
+					<h2 class="visually-hidden">Фильтры</h2>
+					<form class="filters-form">
+						<fieldset class="criteria">
+							<legend class="criteria-group">Инфраструктура:</legend>
+							<p>
+								<input type="checkbox" id="pool" class="visually-hidden" checked>
+								<span></span>
+								<label for="pool" class="checkbox-label">Бассейн</label>
+							</p>
+							<p>
+								<input type="checkbox" id="parking" class="visually-hidden">
+								<label for="parking" class="checkbox-label">Парковка</label>
+							</p>
+							<p>
+								<input type="checkbox" id="wi-fi" class="visually-hidden">
+								<label for="wi-fi" class="checkbox-label">Wi-Fi</label>
+							</p>
+						</fieldset>
+						<fieldset class="criteria">
+							<legend class="criteria-group">Тип жилья:</legend>
+							<p>
+								<input type="checkbox" id="hotel" class="visually-hidden" checked>
+								<label for="hotel" class="checkbox-label">Гостиница</label>
+							</p>
+							<p>
+								<input type="checkbox" id="motel" class="visually-hidden" checked>
+								<label for="motel" class="checkbox-label">Мотель</label>
+							</p>
+							<p>
+								<input type="checkbox" id="apartment" class="visually-hidden" checked>
+								<label for="apartment" class="checkbox-label">Апартаменты</label>						
+							</p>
+						</fieldset>
+						<div class="price-box">
+							<fieldset class="price">
+								<legend class="criteria-group">Стоимость в сутки (Р):</legend>
+								<div class="end-of-range">
+									<input type="text" name="price-range" id="price-min" value="От 0">
+									<label for="price-min" class="visually-hidden">От</label>
+									<input type="text" name="price-range" id="price-max" value="До 3000">
+									<label for="price-max" class="visually-hidden">До</label>
+								</div>
+								<div class="scrollbox"> 
+									<div class="scrollbox-scale"></div>
+									<div class="toggle min-toggle"></div>
+									<div class="toggle max-toggle"></div>
+								</div>
+							</fieldset>
+							<input type="submit" value="Показать">
+						</div>
+					</form>
+				</section>
+				<section class="search-result">
+					<div class="result-sort">
+						<h2 class="visually-hidden">Результаты поиска</h2>
+						<div class="result-box">
+							<span class="static-text">Найдено: <span class="search-result-number">3</span></span>
+						</div>
+						<div class="sort-items">
+							<span>Сортировка:</span>
+							<a href="#" class="sort-item active">По цене</a>
+							<a href="#" class="sort-item">По типу</a>
+							<a href="#" class="sort-item">По рейтингу</a>
+						</div>
+						<div class="sort-buttons">
+							<button type="button" class="direct" name="ascending">
+								<svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+									<path d="M5.5 0L0 10h11z"/>
+								</svg>
+								<span class="visually-hidden">По возрастанию</span>
+							</button>
+							<button type="button" class="direct" name="descending">
+								<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 10">
+									<path fill="#231F20" d="M5.5 10L0 0h11"/>
+								</svg>
+								<span class="visually-hidden">По убыванию</span>
+							</button>
+						</div>
+					</div>
+					<ul class="search-result-list">
+						<li class="hotel-sedona">
+							<div class="hotel-photo">
+								<img src="img/amara.jpg" width="135" height="90" alt="Amara Resort & Spa">
+							</div>
+							<div class="hotel-info">
+								<h3 class="subtitle"><a href="#">Amara Resort & Spa</a></h3>
+								<p>  
+									<span class="search-result-type">Гостиница</span>
+									<span class="search-result-price">От 4000 Р.</span>
+								</p>
+								<p>
+									<a href="" class="hotel-page">Подробнее</a>
+									<a href="" class="booking-form">Забронировать</a>
+								</p>
+							</div>
+							<div class="hotel-quality">
+								<div class="category">
+									<span class="visually-hidden">4 звезды</span>
+									<span class="star"></span>
+									<span class="star"></span>
+									<span class="star"></span>
+									<span class="star"></span>
+								</div>
+								<div class="rating">
+									Рейтинг: <span class="rating-data">8,5</span>
+								</div>
+							</div>
+						</li>
+						<li class="hotel-sedona">
+							<div class="hotel-photo">
+								<img src="img/desert.jpg" width="135" height="90" alt="Desert Quail Inn">
+							</div>
+							<div class="hotel-info">
+								<h3 class="subtitle"><a href="#">Desert Quail Inn</a></h3>
+								<p>
+									<span class="search-result-type">Мотель</span>
+									<span class="search-result-price">От 3000 Р.</span>
+								</p>
+								<p>
+									<a href="" class="hotel-page">Подробнее</a>
+									<a href="" class="booking-form">Забронировать</a>
+								</p>
+							</div>
+							<div class="hotel-quality">
+								<div class="category">
+									<span class="visually-hidden">3 звезды</span>
+									<span class="star"></span>
+									<span class="star"></span>
+									<span class="star"></span>
+								</div>
+								<div class="rating">
+									Рейтинг: <span class="rating-data">8,9</span>
+								</div>
+							</div>
+						</li>
+						<li class="hotel-sedona">
+							<div class="hotel-photo">
+								<img src="img/villas.jpg" width="135" height="90" alt="Villas At Poco Diablo">
+							</div>
+							<div class="hotel-info">
+								<h3 class="subtitle"><a href="#">Villas At Poco Diablo</a></h3>
+								<p>
+									<span class="search-result-type">Апартаменты</span>
+									<span class="search-result-price">От 2000 Р.</span>
+								</p>
+								<p>
+									<a href="" class="hotel-page">Подробнее</a>
+									<a href="" class="booking-form">Забронировать</a>
+								</p>
+							</div>
+							<div class="hotel-quality">
+								<div class="category">
+									<span class="visually-hidden">2 звезды</span>
+									<span class="star"></span>
+									<span class="star"></span>
+								</div>
+								<div class="rating">
+									Рейтинг: <span class="rating-data">9,2</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</section>
+			</main>
+			<footer class="inside-page-footer">
+				<div class="hashtag-box">
+					<h3 class="hashtag">#VISITSEDONA</h3>
+				</div>
+				<div class="social-button">
+					<a class="social tw" href="#">
+						<img src="img/twitter.svg" class="tw-icon" width="17" height="15" alt="Твиттер">
+						Твиттер
+					</a>
+					<a class="social fb" href="#">
+						<img src="img/fb-icon.svg" class="fb-icon" width="12" height="22" alt="Фейсбук">
+						Фейсбук
+					</a>
+					<a class="social yt" href="#">
+						<img src="img/youtube.svg" class="yt-icon" width="20" height="16" alt="YouTube">
+						YouTube
+					</a>
+				</div>
+				<div class="copyright">
+					<p>Website by </p> 
+					<a class="academy-button" href="https://htmlacademy.ru/intensive/htmlcss">
+						<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108.08 36.85">
+							<title>logo-htmlacademy-small1</title>
+							<path d="M44.61,26.88a2,2,0,0,0,.55-0.1v1.33a3.25,3.25,0,0,1-1.18.21,1.67,1.67,0,0,1-1.67-1,4.84,4.84,0,0,1-3.14,1.08c-1.51,0-2.91-.83-2.91-2.55,0-2.13,2-2.79,3.71-2.79a11.08,11.08,0,0,1,2.17.25v-0.3c0-1-.76-1.77-2.19-1.77a7.42,7.42,0,0,0-3,.64v-1.7a10.21,10.21,0,0,1,3.19-.55c2.36,0,3.81,1.12,3.81,3.65v3a0.54,0.54,0,0,0,.49.59h0.17Zm-6.44-1.13A1.35,1.35,0,0,0,39.63,27h0.11a3.39,3.39,0,0,0,2.41-1V24.58a9.72,9.72,0,0,0-1.81-.21c-1,0-2.16.33-2.16,1.38h0Zm12.36-6.11a5,5,0,0,1,2.57.64V22a4.08,4.08,0,0,0-2.3-.7,2.75,2.75,0,1,0,0,5.49,5,5,0,0,0,2.43-.64v1.71a6.27,6.27,0,0,1-2.76.57A4.21,4.21,0,0,1,46,24.51q0-.21,0-0.41a4.32,4.32,0,0,1,4.18-4.46h0.38Zm12.17,7.24a2,2,0,0,0,.55-0.1v1.33a3.25,3.25,0,0,1-1.18.21,1.67,1.67,0,0,1-1.67-1,4.84,4.84,0,0,1-3.14,1.08c-1.51,0-2.91-.83-2.91-2.55,0-2.13,2-2.79,3.71-2.79a11.08,11.08,0,0,1,2.17.25v-0.3c0-1-.76-1.77-2.19-1.77a7.42,7.42,0,0,0-3,.64v-1.7a10.21,10.21,0,0,1,3.19-.55c2.36,0,3.81,1.12,3.81,3.65v3a0.54,0.54,0,0,0,.49.59h0.17Zm-6.44-1.13A1.35,1.35,0,0,0,57.73,27h0.11a3.39,3.39,0,0,0,2.41-1V24.58a9.72,9.72,0,0,0-1.81-.21c-1.06,0-2.16.33-2.16,1.38h0ZM73,16V28.2H71.35V26.88a3.88,3.88,0,0,1-3.19,1.54,4.4,4.4,0,0,1,0-8.78,3.81,3.81,0,0,1,3,1.3V16H73Zm-4.53,5.22a2.76,2.76,0,1,0,0,5.52A2.86,2.86,0,0,0,71.15,25V23A2.91,2.91,0,0,0,68.49,21.27ZM79,19.64c3.31,0,4.46,2.68,3.92,5.09H76.7c0.21,1.5,1.67,2.11,3.19,2.11a6.11,6.11,0,0,0,2.64-.59v1.6a7.14,7.14,0,0,1-3,.57C77,28.42,74.78,27,74.78,24a4.18,4.18,0,0,1,4-4.39H79Zm0.09,1.54a2.28,2.28,0,0,0-2.44,2.1v0.06H81.3A2,2,0,0,0,79.13,21.18Zm5.73,7V19.87h1.65v1a3.81,3.81,0,0,1,2.78-1.27A2.86,2.86,0,0,1,91.89,21a4.12,4.12,0,0,1,2.91-1.33A3.06,3.06,0,0,1,98,23V28.2h-1.9V23.05a1.59,1.59,0,0,0-1.42-1.75H94.42a2.8,2.8,0,0,0-2.07,1.12V28.2h-1.9V23.05A1.59,1.59,0,0,0,89,21.31H88.8a3,3,0,0,0-2.21,1.29v5.63H84.86Zm21.31-8.33h1.9l-3.91,9.46c-0.9,2.17-2.09,2.86-3.35,2.86a4.76,4.76,0,0,1-1.1-.14V30.46a2.86,2.86,0,0,0,.85.12c0.9,0,1.58-.64,2.07-1.9l0.17-.42-4-8.4h2l2.86,6.29ZM38.73,1.46V6.22a3.81,3.81,0,0,1,2.7-1.14,3.25,3.25,0,0,1,3.44,3.4v5.15H43V8.72a1.81,1.81,0,0,0-1.61-2h-0.3a2.93,2.93,0,0,0-2.32,1.39v5.52h-1.9V1.46h1.9ZM49.94,2.31v3h3V6.91h-3v3.81c0,1.1.5,1.46,1.58,1.46a4.49,4.49,0,0,0,1.69-.33v1.6A6.8,6.8,0,0,1,51,13.8a2.55,2.55,0,0,1-2.86-2.74V6.89H46.58V5.26h1.5V2.74Zm5.4,11.31V5.28H57v1A3.81,3.81,0,0,1,59.77,5a2.86,2.86,0,0,1,2.6,1.33A4.12,4.12,0,0,1,65.28,5,3.06,3.06,0,0,1,68.44,8.4v5.21h-1.9V8.46a1.59,1.59,0,0,0-1.42-1.75H64.89a2.8,2.8,0,0,0-2.07,1.12v5.78h-1.9V8.46A1.59,1.59,0,0,0,59.5,6.71H59.27A3,3,0,0,0,57.06,8v5.63H55.34ZM71.17,1.45H73V13.6H71.17V1.45ZM14.71,0H14.55L0,1.54V28.21l14.55,8.66,14.55-8.66V1.54Zm12.5,27.1L14.55,34.64,1.9,27.12V16.18l12.59,7.5V25L5.86,19.9v1.31l8.68,5.21v1.39L5.87,22.65V24l8.68,5.21,8.75-5.24V18.31L27.2,16V27.12Zm0-12.53-3.48,2-1.6,1L14.51,13v1.31L21,18.23H21l-0.14.09-1,.54-5.37-3.2V17l4.24,2.52-1,.67-3.2-1.9v1.31l2.1,1.24L14.5,22.1,2,14.65,14.51,7.11Zm0-1.32L14.49,5.76,1.91,13.25v-10L14.56,1.92,27.21,3.25v10h0Z" transform="translate(0 -0.02)" fill="#231f20"/>
+						</svg>
+					</a>
+				</div>
+			</footer>
+		</div>
+  </body>
+</html>

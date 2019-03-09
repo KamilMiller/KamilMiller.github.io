@@ -1,0 +1,1 @@
+var nojs=document.querySelector(".nojs"),link=document.querySelector(".open-form-button"),popup=document.querySelector(".search-form-field");nojs.classList.remove("nojs"),link.addEventListener("click",function(e){e.preventDefault(),popup.classList.toggle("hide-form")});
